@@ -127,14 +127,22 @@ def next_run_dir(base: Path, mode: str, now: datetime) -> Path:
         index += 1
 
 
-def ensure_gitignore(root: Path) -> bool:
+def ensure_gitignore(root: Path, base: str = "PLAYTEST") -> bool:
+    """Traegt den Play-Test-Ordner in die .gitignore ein.
+
+    `base` MUSS uebergeben werden, sobald --base benutzt wird. Vorher war der
+    Eintrag fest auf "PLAYTEST/" verdrahtet: Wer mit --base einen anderen
+    Ordner waehlte, bekam ihn angelegt, aber .gitignore schuetzte ihn nicht --
+    die Play-Test-Daten waren damit committbar.
+    """
+    entry = f"{base.strip('/')}/"
     gitignore = root / ".gitignore"
     existing = gitignore.read_text(encoding="utf-8") if gitignore.exists() else ""
     lines = existing.splitlines()
-    if "PLAYTEST/" in lines:
+    if entry in lines:
         return False
     suffix = "" if existing.endswith("\n") or existing == "" else "\n"
-    gitignore.write_text(f"{existing}{suffix}PLAYTEST/\n", encoding="utf-8")
+    gitignore.write_text(f"{existing}{suffix}{entry}\n", encoding="utf-8")
     return True
 
 
@@ -156,7 +164,7 @@ def main() -> int:
     for filename, content in FILES.items():
         (run_dir / filename).write_text(content, encoding="utf-8")
 
-    gitignore_changed = ensure_gitignore(root)
+    gitignore_changed = ensure_gitignore(root, args.base)
 
     result = {
         "mode": args.mode,

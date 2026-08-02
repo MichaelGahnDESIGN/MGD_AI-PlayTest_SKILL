@@ -6,14 +6,14 @@ Der Skill ist ein normales Markdown-Skill-Repository. Du kannst ihn in verschied
 
 ```bash
 mkdir -p ~/.codex/skills
-git clone https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill.git ~/.codex/skills/playtest
+git clone https://github.com/MichaelGahnDESIGN/MGD_AI-PlayTest_SKILL.git ~/.codex/skills/playtest
 ```
 
 ## Claude Code
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill.git ~/.claude/skills/playtest
+git clone https://github.com/MichaelGahnDESIGN/MGD_AI-PlayTest_SKILL.git ~/.claude/skills/playtest
 ```
 
 ## Projektlokal
@@ -22,7 +22,7 @@ Du kannst den Skill auch direkt in ein Projekt legen:
 
 ```bash
 mkdir -p .ai-skills
-git clone https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill.git .ai-skills/playtest
+git clone https://github.com/MichaelGahnDESIGN/MGD_AI-PlayTest_SKILL.git .ai-skills/playtest
 ```
 
 Dann dem Agenten sagen:

@@ -34,11 +34,11 @@ Beispiele:
 ```bash
 # Codex
 mkdir -p ~/.codex/skills
-git clone https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill.git ~/.codex/skills/playtest
+git clone https://github.com/MichaelGahnDESIGN/MGD_AI-PlayTest_SKILL.git ~/.codex/skills/playtest
 
 # Claude Code
 mkdir -p ~/.claude/skills
-git clone https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill.git ~/.claude/skills/playtest
+git clone https://github.com/MichaelGahnDESIGN/MGD_AI-PlayTest_SKILL.git ~/.claude/skills/playtest
 ```
 
 Danach kannst du in einem Projekt zum Beispiel schreiben:
@@ -253,24 +253,24 @@ Empfohlen:
 Der AI-PlayTest-Skill gehört zu einer kleinen Werkzeugfamilie für
 KI-gestützte Projektarbeit.
 
-- [AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/AI-Basic-Projektordner)  
+- [AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/MGD_AI-Basic-Projektordner_TOOL)  
   Eine saubere Projektvorlage mit Regeln, Dokumentation, Agentenstruktur und
   Sicherheitsgrenzen. Sinnvoll als Basis für neue Projekte.
 
-- [AI Project Updater Skill](https://github.com/MichaelGahnDESIGN/AI-Project-Updater-Skill)  
+- [AI Project Updater Skill](https://github.com/MichaelGahnDESIGN/MGD_AI-Project-Updater_SKILL)  
   Ein geführter Assistent für lokale Staging-Umgebungen, Docker-Planung,
   Update-Vorbereitung und sichere Staging-zu-Live-Abläufe. Das Repository ist
   während der Entwicklung zunächst privat.
 
-- [DEV-Skill](https://github.com/MichaelGahnDESIGN/DEV-Skill)  
+- [DEV-Skill](https://github.com/MichaelGahnDESIGN/MGD_DEV_SKILL)  
   Ein projektneutraler Skill für Projekt-Sync, Tests, GitHub-Abgleich,
   Deploy-Vorbereitung, Backups und Abschlussberichte.
 
-- [ProjectClean-Skill](https://github.com/MichaelGahnDESIGN/ProjectClean-Skill)  
+- [ProjectClean-Skill](https://github.com/MichaelGahnDESIGN/MGD_ProjectClean_SKILL)  
   Ein Abschluss- und Aufräum-Skill für Versionen, Tests, Commits, Backups,
   Dokumentation und vorsichtiges Cleanup.
 
-- [Claude-Codex-MCP](https://github.com/MichaelGahnDESIGN/Claude-Codex-MCP)  
+- [Claude-Codex-MCP](https://github.com/MichaelGahnDESIGN/MGD_Claude-Codex_MCP)  
   Ein lokales MCP-System für Aufgaben, Chat und Übergaben zwischen Claude,
   Codex und weiteren KI-Agenten.
 
@@ -279,7 +279,7 @@ KI-gestützte Projektarbeit.
 Ausführliche Beispiele, Checklisten, Live-Test-Regeln, Datenschutz-Hinweise und Troubleshooting findest du im Wiki-Bereich:
 
 - [docs/wiki/Home.md](docs/wiki/Home.md)
-- GitHub Wiki: <https://github.com/MichaelGahnDESIGN/AI-PlayTest-Skill/wiki>
+- GitHub Wiki: <https://github.com/MichaelGahnDESIGN/MGD_AI-PlayTest_SKILL/wiki>
 
 ## Lizenz
 
@@ -294,7 +294,7 @@ Diese Daten dürfen **niemals** die lokale Maschine verlassen — weder nach Git
 - **Sensible Daten:** `.env*` (außer `.env.example`), Tokens, API-Keys, Passwörter, `*.pem`, `*.key`, Zugangsdaten — niemals committen/pushen/deployen.
 - **Push-Disziplin:** Nur den Hauptbranch (`main`) pushen, **niemals** `git push --all`/`--mirror`. `PlayTest*`-Branches werden nie gepusht.
 
-Alle genannten Muster gehören in `.gitignore`. Technische Absicherung: der Pre-Push-Hook aus dem [MGD-DEV-Skill](https://github.com/MichaelGahnDESIGN/MGD-DEV-Skill) (`dev/hooks/pre-push`) blockiert solche Pushes hart — empfohlen, am besten global via `git config --global core.hooksPath ~/.git-hooks`.
+Alle genannten Muster gehören in `.gitignore`. Technische Absicherung: der Pre-Push-Hook aus dem [MGD-DEV-Skill](https://github.com/MichaelGahnDESIGN/MGD_DEV_SKILL) (`dev/hooks/pre-push`) blockiert solche Pushes hart — empfohlen, am besten global via `git config --global core.hooksPath ~/.git-hooks`.
 
 ---
 
@@ -302,10 +302,10 @@ Alle genannten Muster gehören in `.gitignore`. Technische Absicherung: der Pre-
 
 | Projekt | Beschreibung |
 |---------|-------------|
-| [MGD-App-Updater-Skill](https://github.com/MichaelGahnDESIGN/MGD-App-Updater-Skill) | Software-Update-Systeme planen und implementieren |
-| [MGD-Bugreport-Skill](https://github.com/MichaelGahnDESIGN/MGD-Bugreport-Skill) | Feedback-Hub: Bug-Meldung, Ideen und Support |
-| [MGD-DEV-Skill](https://github.com/MichaelGahnDESIGN/MGD-DEV-Skill) | Release, Sync, Backup und Wissensdokumentation |
-| [MGD-AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/MGD-AI-Basic-Projektordner) | Projektvorlage für KI-Agenten |
+| [MGD-App-Updater-Skill](https://github.com/MichaelGahnDESIGN/MGD_Software-Updater_SKILL) | Software-Update-Systeme planen und implementieren |
+| [MGD-Bugreport-Skill](https://github.com/MichaelGahnDESIGN/MGD_BugReport_SKILL) | Feedback-Hub: Bug-Meldung, Ideen und Support |
+| [MGD-DEV-Skill](https://github.com/MichaelGahnDESIGN/MGD_DEV_SKILL) | Release, Sync, Backup und Wissensdokumentation |
+| [MGD-AI-Basic-Projektordner](https://github.com/MichaelGahnDESIGN/MGD_AI-Basic-Projektordner_TOOL) | Projektvorlage für KI-Agenten |
 
 → Alle öffentlichen Projekte: [github.com/MichaelGahnDESIGN](https://github.com/MichaelGahnDESIGN)
 
